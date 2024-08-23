@@ -36,7 +36,7 @@ def load_cifar10(root_dir):
     return train_data, train_labels, test_data, test_labels
 
 
-# root_dir = "//Users//yanajakhwal//Desktop//Projects//Image_Classification//cifar10_data//cifar-10-batches-py"
+root_dir = "//Users//yanajakhwal//Desktop//Projects//Image_Classification//cifar10_data//cifar-10-batches-py"
 # x_train, y_train, x_test, y_test = load_cifar10(root_dir)
 
 # print("Training data shape:", x_train.shape)

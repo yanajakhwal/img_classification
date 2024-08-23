@@ -2,3 +2,5 @@ env
 notes.md
 cifar-10-batches-py
 cifar-10-python.tar
+cifar10_cnn_model.h5
+__pycache__
