@@ -20,7 +20,7 @@
    "source": [
     "### loading the data\n",
     "- cifar10: \n",
-    "    - was loaded from a folder/package online\n",
+    "    - was loaded from a folder online\n",
     "    - is a dataset for image classification\n",
     "    - included in the tensorflow.keras.datasets module\n",
     "    - is imported from data.py, it outputs training and testing data partitions (x_train, y_train, x_test, and y_test)\n",
@@ -221,11 +221,11 @@
     "### model architecture\n",
     "- why use a CNN?\n",
     "    - a CNN is a neural network designed for processing structured grid-like-data (like images).\n",
-    "    - they utilize convolutional layers that apply filters (kernels) to local regions of the input image.\n",
+    "    - they utilize convulutional layers that apply filters (kernels) to local regions of the input image.\n",
     "         - effeciently capture features like edges (lower layers)\n",
     "         - more complex detetct patterns like shapes or entire objects (higher layers)\n",
     "         - using different levels of learn features (lower to higher layers) mimicks the human process of precieving visual information\n",
-    "    - the same filter is applied to different parts of the image and so the network will lern a set of filters which can detect features anywhere in the image.\n",
+    "    - the same filter is applied to different parts of the image and so teh network will lern a set of filters which can detect features anywhere in the image.\n",
     "        - this reduced the number of parameters in the network compared to the fully connected layers of traditional neural networks\n",
     "        - so CNNs are more efficient and less prone to overfitting (especially when dealing with large images)\n",
     "    - benefits of translation invariance:\n",
@@ -248,7 +248,7 @@
     "    - shape of input is 32x32 pixed with 3 colour channels (RGB) for the first layer\n",
     "- pooling layers:\n",
     "    - downsamples the feature maps by taking the maximum value in each 2x2 region \n",
-    "        - reduced the spatial dimesion by half (ex: 32x32 => 16x16) which reduced numbers of parameters and compuations in the network also provides translation invariance\n",
+    "        - reduced the spatial dimesion by half (ex: 32x32 => 16x16) which reduced numbers of parameters and compuations in the networkm also provides translation invariance\n",
     "- flattening layer:\n",
     "    - converts the three-dimensional output into a one-dimensional vector (i.e: flattening)\n",
     "    - the vector length is calculated using the previous layers' product (ex: 32 x 64 x 128)\n",
@@ -320,7 +320,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### compiling the model and defining the loss function and model\n",
+    "### compiling the model\n",
     "- configures the learnign process before the model starts training.\n",
     "- specifies the optimizer, loss function and metrics the model utilizes during training and evaluation\n",
     "- optimizer = Adam():\n",
@@ -365,7 +365,7 @@
     "- batch_size: number of samples\n",
     "    - larger sizes are more computationally efficient but might lead to less frequent updates (could slow the learning)\n",
     "- validation data: used to monitior the performance of the epochs\n",
-    "    - using test data is not typical but necessary with a lack of data because validation sets are meant to be an unbiased evaluation metric"
+    "    - using test data is not typical but necessary with a lack of data as validatipon sets are meant to be an unbiased evaluation metric"
    ]
   },
   {
